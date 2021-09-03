@@ -10,6 +10,8 @@
   padding-left: 20px;
   font-size: 1.2rem;
   color: var(--main-text-color);
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px var(--shadow-color);
 }
 .records td {
   height: 50px;
