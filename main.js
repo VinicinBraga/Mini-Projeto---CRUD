@@ -6,7 +6,7 @@ const closeModal = () =>
 
 const tempClient = {
   nome: "Renata",
-  email: "vinicin@bragamatta.com.br",
+  email: "renata@gmail.com.br",
   celular: "31987654321",
   cidade: "Belo Horizonte",
 };
@@ -17,10 +17,26 @@ const setLocalStorage = (dbClient) =>
   localStorage.setItem("db_client", JSON.stringify(dbClient));
 
 // CRUD - Create, Read, Update and Delete:
-// CREATE
+//Create
 const createClient = (client) => {
   const dbClient = getLocalStorage();
   dbClient.push(client);
+  setLocalStorage(dbClient);
+};
+//Read
+const readClient = () => getLocalStorage();
+
+//Update
+const updateClient = (index, client) => {
+  const dbClient = readClient();
+  dbClient[index] = client;
+  setLocalStorage(dbClient);
+};
+
+//Delete
+const deleteClient = (index) => {
+  const dbClient = readClient();
+  dbClient.splice(index, 1);
   setLocalStorage(dbClient);
 };
 
