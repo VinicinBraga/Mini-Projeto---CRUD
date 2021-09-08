@@ -112,7 +112,7 @@ const editAndDelete = (event) => {
       editClient(index);
     } else {
       const client = readClient()[index];
-      const response = confirm(`Você deseja realmente excluir ${client.nome}`);
+      const response = confirm(`Você realmente deseja excluir ${client.nome}`);
       if (response) {
         deleteClient(index);
         updateTable();
@@ -135,3 +135,5 @@ document.getElementById("salvar").addEventListener("click", saveClient);
 document
   .querySelector("#tableClient>tbody")
   .addEventListener("click", editAndDelete);
+
+document.getElementById("cancelar").addEventListener("click", closeModal);
