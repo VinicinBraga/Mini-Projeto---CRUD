@@ -45,6 +45,9 @@ main {
   box-shadow: 4px 4px 10px var(--shadow-color);
   gap: 20px;
 }
+td {
+  border: 10px solid transparent;
+}
 
 footer {
   width: 100;
